@@ -12,7 +12,7 @@ const UserApp: React.FC = () => {
       setLoading(true);
       const res = await axios.get("https://reqres.in/api/users?page=1", {
         headers: {
-          "x-api-key": "reqres_ae3aa03bb8084f829438f5f88aa53289",
+          "x-api-key": import.meta.env.VITE_REQRES_API_KEY,
         },
       });
       const { data } = res.data;
